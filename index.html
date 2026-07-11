@@ -3,102 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
+<title>The Furry Fandom</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#7c4dff,#42a5f5);
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#10131a;
     color:white;
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#171c28;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#7ec8ff;
 }
 
 header{
-    text-align:center;
-    padding:60px 20px;
-    background:rgba(0,0,0,.25);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#4f46e5,#0ea5e9,#10b981);
+    animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+from{filter:hue-rotate(0deg);}
+to{filter:hue-rotate(80deg);}
 }
 
 h1{
-    font-size:48px;
-    margin-bottom:10px;
+    font-size:70px;
 }
 
-.container{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
+p{
+    max-width:700px;
+    text-align:center;
+    margin-top:20px;
+    line-height:1.7;
+}
+
+button{
+    margin-top:40px;
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#222;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
 }
 
 .card{
-    background:rgba(255,255,255,.15);
+    background:#1b2230;
+    padding:30px;
     border-radius:15px;
-    padding:25px;
-    margin-bottom:25px;
-    backdrop-filter:blur(8px);
-}
-
-h2{
-    color:#ffe082;
-}
-
-ul{
-    line-height:2;
+    margin:25px 0;
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    opacity:.8;
+    padding:30px;
+    background:#171c28;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#history">History</a>
+<a href="#faq">FAQ</a>
+</nav>
+
 <header>
-    <h1>🐾 About Me 🐾</h1>
-    <p>Welcome to my website!</p>
+
+<h1>🐾 Welcome! 🐾</h1>
+
+<p>
+This website celebrates the creativity of the furry fandom—
+a community built around art, storytelling, animation,
+games, and anthropomorphic animal characters.
+</p>
+
+<button onclick="scrollToSection()">
+Explore
+</button>
+
 </header>
 
-<div class="container">
+<section id="about">
 
-    <div class="card">
-        <h2>What is a furry?</h2>
-        <p>
-            A furry is someone who enjoys anthropomorphic animal characters—
-            animals with human-like personalities or traits. Many people enjoy
-            furry art, stories, games, costumes, or creating their own original
-            characters called fursonas.
-        </p>
-    </div>
+<div class="card">
+<h2>What is the furry fandom?</h2>
 
-    <div class="card">
-        <h2>Why I Like It</h2>
-        <ul>
-            <li>🐺 I enjoy creative character designs.</li>
-            <li>🎨 I like the artwork and creativity.</li>
-            <li>📖 I enjoy stories featuring animal characters.</li>
-            <li>🎮 Many games and animations include fun anthropomorphic characters.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Fun Facts</h2>
-        <ul>
-            <li>Everyone enjoys the hobby in their own way.</li>
-            <li>Some people draw.</li>
-            <li>Some write stories.</li>
-            <li>Some make costumes called fursuits.</li>
-            <li>Others simply enjoy the community and artwork.</li>
-        </ul>
-    </div>
+<p>
+The furry fandom is a creative community focused on characters
+that combine human and animal traits.
+People participate in many different ways:
+drawing artwork, writing stories, role-playing,
+making costumes, creating games,
+or simply appreciating the creativity.
+</p>
 
 </div>
 
+<div class="card">
+
+<h2>Meet Our Fictional Mascot</h2>
+
+<p>
+
+Nova the fox is a fictional explorer who loves coding,
+video games, music, and meeting new friends.
+Nova appears throughout this demo website
+to show how an original furry character might be presented.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="history">
+
+<div class="card">
+
+<h2>A Brief History</h2>
+
+<p>
+
+The modern furry fandom grew during the 1980s,
+expanding through conventions, online communities,
+artists, writers, and game developers.
+Today it includes people from many different backgrounds
+who enjoy creative projects involving anthropomorphic characters.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<div class="card">
+
+<h2>Frequently Asked Questions</h2>
+
+<p>
+
+<strong>Is everyone in the fandom the same?</strong><br><br>
+
+No. People enjoy different parts of the hobby,
+from drawing and writing to gaming or collecting artwork.
+
+<br><br>
+
+<strong>Do you need a fursona?</strong><br><br>
+
+No. Some people create one, while others simply enjoy the art and community.
+
+</p>
+
+</div>
+
+</section>
+
 <footer>
-    Made with ❤️ and creativity.
+
+Created as a demonstration website using HTML, CSS, and JavaScript.
+
 </footer>
+
+<script>
+
+function scrollToSection(){
+document.getElementById("about").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
 
 </body>
 </html>
